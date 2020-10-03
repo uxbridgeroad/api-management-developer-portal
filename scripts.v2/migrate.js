@@ -13,6 +13,21 @@
  * 
  * You can specify the SAS tokens directly (via sourceToken and destToken), or you can supply an identifier and key,
  * and the script will generate tokens that expire in 1 hour. (via sourceId, sourceKey, destId, destKey)
+ *
+ *RAP_notes 3 Oct 2020 
+ *My default node v was 6.5. ===> npm install rsied many errors & migrate script failed witth errors
+ *node --version  ===> v6.5
+ *
+ *===> upgraded node to latest
+ *===> brew update   
+ *=== >brew upgrade node
+ *===> node --version  ===> v12.??
+ *===> nvm use 12 
+ *===> from scripts.v2 ==> npm install  ==> sucess
+ *
+ *===> then ran migrate script sucessfully
+ *===> node migrate --sourceEndpoint spor-dev-v3.management.azure-api.net --destEndpoint spor-dev-v2.management.azure-api.net --publishEndpoint spor-dev-v2.developer.azure-api.net --sourceToken "SharedAccessSignature integration&202011021640&18rkaKcF3Tsgqf1AtrvfB60LiMPe2wBMgWavGwoArwMBkBKVJO8qwCJRfmyVBbRPc1lKhQumDMHESkDATwjnTA==" --destToken "SharedAccessSignature integration&202011021800&lbhJqinCEMNldCcaAM/curWQjqvyiOjJYvPxrPTOZEaGKvooyhyZ2KHbzBDweT9jOSEVlsrWSk+YP7tcnuX8zQ=="
+
  */
 
 const moment = require('moment');
